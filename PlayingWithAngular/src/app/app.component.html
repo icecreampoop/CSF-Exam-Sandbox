@@ -1,0 +1,18 @@
+<p> In main app.component, how to use ONE function to work on different variables, surprisingly complicated</p>
+<hr>
+<ng-container>
+    <!--
+        conditionally flip the underlying boolean value by reading the value
+    -->
+    <button (click)="showTry('firstTryVisible')">See First Output</button>
+    <p>[ngClass] sample</p>
+    <app-first-try *ngIf="firstTryVisible"></app-first-try>
+</ng-container>
+<hr>
+<ng-container>
+    <!--
+        conditionally flip the underlying boolean value by reading the value
+    -->
+    <button (click)="showTry('secondTryVisible')">See Second Output</button>
+    <app-second-try *ngIf="secondTryVisible"></app-second-try>
+</ng-container>

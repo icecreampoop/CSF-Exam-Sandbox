@@ -1,0 +1,5 @@
+<div [ngClass]="{'active': isActive, 'error': hasError}">
+    This div will have 'active' class if isActive is true and 'error' class if hasError is true.
+  </div>
+  <button (click)="toggleActive()">Toggle Active</button>
+  <button (click)="toggleError()">Toggle Error</button>
