@@ -1,0 +1,11 @@
+figure>img {
+    width: 30vw;
+    height: auto;
+    border-radius: 8px;
+}
+
+img {
+    width: 30vw;
+    height: auto;
+    border-radius: 8px;
+}

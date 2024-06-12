@@ -1,1 +1,34 @@
-<p>second-try works!</p>
+<p>sample using input() output()
+    <span>
+        <button (click)="clickShowIOSample()">Show Input Output</button>
+
+        <figure *ngIf="showIOSample">
+            <img [src]="imageUrl" (click)="imageCLicked($event)">
+            <figcaption>{{caption | titlecase | uppercase}}({{counter}})</figcaption>
+        </figure>
+
+    </span>
+</p>
+
+
+<h1>Using *ngFor (structural directive)</h1>
+<h3 *ngIf="(placeholderImageModels.length % 2) == 0">You have Even number of pictures</h3>
+<h3 *ngIf="(placeholderImageModels.length % 2) != 0">You have Even number of pictures</h3>
+<div *ngFor="let x of placeholderImageModels; let index = index">
+    <img [src]="x.imageUrl" (click)="increasingCounterInArray(index)">
+    <caption>My Image ({{index + 1}}) Current Counter: ({{x.counter}})</caption>
+</div>
+
+<h2>With at_for (new flow control, - directive) </h2>
+<h2>New flow control after V15</h2>
+
+@for (x of placeholderImageModels; track idx; let idx = $index) {
+<img [src]="x.imageUrl" (click)="increasingCounterInArray(idx)">
+<caption>My Image ({{idx + 1}}) Current Counter: ({{x.counter}})</caption>
+}
+
+@if((placeholderImageModels.length % 2) == 0) {
+<h3>You have EVEN number of pictures</h3>
+} @else {
+<h3>You have ODD number of pictures</h3>
+}
