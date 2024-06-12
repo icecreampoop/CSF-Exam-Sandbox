@@ -12,22 +12,25 @@
 
 
 <h1>Using *ngFor (structural directive)</h1>
-<h3 *ngIf="(placeholderImageModels.length % 2) == 0">You have Even number of pictures</h3>
-<h3 *ngIf="(placeholderImageModels.length % 2) != 0">You have Even number of pictures</h3>
-<div *ngFor="let x of placeholderImageModels; let index = index">
-    <img [src]="x.imageUrl" (click)="increasingCounterInArray(index)">
+<h3 *ngIf="(placeholderImageModels1.length % 2) == 0">You have Even number of pictures</h3>
+<h3 *ngIf="(placeholderImageModels1.length % 2) != 0">You have Even number of pictures</h3>
+<div *ngFor="let x of placeholderImageModels1; let index = index">
+    <img [src]="x.imageUrl" (click)="increasingCounterInArray1(index)">
     <caption>My Image ({{index + 1}}) Current Counter: ({{x.counter}})</caption>
 </div>
 
 <h2>With at_for (new flow control, - directive) </h2>
 <h2>New flow control after V15</h2>
 
-@for (x of placeholderImageModels; track idx; let idx = $index) {
-<img [src]="x.imageUrl" (click)="increasingCounterInArray(idx)">
-<caption>My Image ({{idx + 1}}) Current Counter: ({{x.counter}})</caption>
+@for (x of placeholderImageModels2; track idx; let idx = $index) {
+<div>
+    <img [src]="x.imageUrl" (click)="increasingCounterInArray2(idx)">
+    <caption>My Image ({{idx + 1}}) Current Counter: ({{x.counter}})</caption>
+</div>
+
 }
 
-@if((placeholderImageModels.length % 2) == 0) {
+@if((placeholderImageModels2.length % 2) == 0) {
 <h3>You have EVEN number of pictures</h3>
 } @else {
 <h3>You have ODD number of pictures</h3>
