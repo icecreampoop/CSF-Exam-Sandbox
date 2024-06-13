@@ -18,3 +18,6 @@
     - validators
     - writing models and service ts files
     - the openweather api key is hardcoded but in practise it should be a api call onto spring boot backend to not expose the key (mr gpt says theres no @value and setting it in properties file equivalent)
+## Indexing Chuk's Code
+    - spring boot uploading to s3 with thymeleaf (https://github.com/chukmunnlee/ibf2023/tree/master/day37-uploads)
+    
