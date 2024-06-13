@@ -19,5 +19,6 @@
     - writing models and service ts files
     - the openweather api key is hardcoded but in practise it should be a api call onto spring boot backend to not expose the key (mr gpt says theres no @value and setting it in properties file equivalent)
 ## Indexing Chuk's Code
+- Frontend w proxy w componentstore caching + separate API calling backend in spring boot + docker multi stage (https://github.com/chukmunnlee/ibf2023/tree/master/day36-giphy)
+- component store OR dexie + spring boot full stack sample (https://github.com/chukmunnlee/ibf2023/tree/master/day36)
 - spring boot uploading to s3 with thymeleaf (https://github.com/chukmunnlee/ibf2023/tree/master/day37-uploads)
-- 
